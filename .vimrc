@@ -66,7 +66,7 @@ func SetTitle()
 		call append(line(".")+4, "# @version 0.1")
 		call append(line(".")+5, "#########################################################################")
 		call append(line(".")+6, "")
-		call append(line(".")+7, "#!/bin/bash")
+		call append(line(".")+7, "#!/usr/bin/env bash")
 		call append(line(".")+8, "")
 	else
 		call setline(1, "/**")
