@@ -11,7 +11,6 @@
 set -e
 
 SHELL_FOLDER=$(cd "$(dirname "$0")"; pwd)
-echo $SHELL_FOLDER
 
 if [[ -L ~/.vimrc ]]; then
   unlink ~/.vimrc
