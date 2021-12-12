@@ -37,7 +37,7 @@ set ruler
 filetype plugin indent on
 
 "增加配置项colorscheme $YOUR_COLOR_THEAME并保存 (假设下载了一个叫$YOUR_COLOR_THEAME的配色方案文件$YOUR_COLOR_THEAME.vim)"
-colorscheme gotham
+colorscheme solarized8
 
 "Vim支持多种折叠形式：手动折叠manual、基于缩进行折叠indent、基于语法进行折叠syntax、未更改文本折叠diff等"
 "Vim打开文件后，重复使用操作命令 za 可打开或关闭当前折叠；zM 用于关闭所有折叠，zR 则用来打开所有折叠。"
