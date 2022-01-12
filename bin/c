@@ -1,0 +1,13 @@
+##########################################################################
+# @file c.sh
+# @author Jack
+# @mail chengjunjie.jack@gmail.com
+# @date 2022-01-12
+# @version 0.1
+#########################################################################
+
+#!/usr/bin/env bash
+
+outfilename=${1%.*}.out
+
+clang++ -g -std=c++11 -o "$outfilename" $1 && ./"$outfilename"
