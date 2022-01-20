@@ -71,14 +71,13 @@ func SetTitle()
 	else
 		call setline(1, "/**")
 		call append(line("."), " * @file ".expand("%"))
-		call append(line(".")+1, " * @author ".g:USER)
-		call append(line(".")+2, " * @mail ".g:EMAIL)
-		call append(line(".")+3, " * @date ".g:DATE)
-		call append(line(".")+4, " * @version 0.1")
+		call append(line(".")+1, " * @author ".g:USER." (".g:EMAIL.")")
+		call append(line(".")+2, " * @brief ")
+		call append(line(".")+3, " * @version 0.1")
+		call append(line(".")+4, " * @date ".g:DATE)
 		call append(line(".")+5, " *")
 		call append(line(".")+6, " * @copyright Copyright (c) ".strftime('%Y'))
 		call append(line(".")+7, " */")
-		call append(line(".")+8, "")
 	endif
 	" 新建文件后，自动定位到文件末尾
 	autocmd BufNewFile * normal G

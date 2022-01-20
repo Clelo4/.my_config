@@ -10,4 +10,4 @@
 
 outfilename=${1%.*}.out
 
-clang++ -g -std=c++11 -o "$outfilename" $1 && ./"$outfilename"
+g++ -o "$outfilename" $1 -g -std=c++11 -lpthread  && ./"$outfilename"
