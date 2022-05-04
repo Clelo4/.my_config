@@ -12,6 +12,16 @@ set -e
 
 SHELL_FOLDER=$(cd "$(dirname "$0")"; pwd)
 
+. ./utils.sh
+
+command -v vim &> /dev/null || {
+  install_software vim
+}
+
+command -v git &> /dev/null || {
+  install_software git
+}
+
 ### install .vimrc
 if [[ -L ~/.vimrc ]]; then
   unlink ~/.vimrc
