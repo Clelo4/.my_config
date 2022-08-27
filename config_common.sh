@@ -10,7 +10,7 @@
 
 set -e
 
-SHELL_FOLDER=$(cd "$(dirname "$0")"; pwd)
+WORK_FOLDER=$(dirname $(readlink -f "$0"))
 
 . ./utils.sh
 
@@ -30,7 +30,7 @@ if [[ -f ~/.vimrc ]]; then
   mv ~/.vimrc ~/.vimrc_bak_$(date "+%s")
 fi
 set -x;
-ln -s ${SHELL_FOLDER}/.vimrc ~/.vimrc
+ln -s ${WORK_FOLDER}/.vimrc ~/.vimrc
 set +x;
 ###
 
@@ -42,13 +42,13 @@ if [[ -d ~/.vim ]]; then
   mv ~/.vim ~/.vim_bak_$(date "+%s")
 fi
 set -x;
-ln -s ${SHELL_FOLDER}/.vim ~/.vim
+ln -s ${WORK_FOLDER}/.vim ~/.vim
 set +x;
 ###
 
 ### install .gitconfig
 if [[ ! -f ~/.gitconfig ]]; then
   set -x;
-  ln -s ${SHELL_FOLDER}/.gitconfig ~/.gitconfig
+  ln -s ${WORK_FOLDER}/.gitconfig ~/.gitconfig
   set +x;
 fi
